@@ -16,6 +16,7 @@
 		08BDAEFD1B840C7A0058F440 /* Square_ServiceIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEFC1B840C7A0058F440 /* Square_ServiceIOSTests.swift */; };
 		08BDAF071B840E430058F440 /* map-pin-alt-600x600.png in Resources */ = {isa = PBXBuildFile; fileRef = 08BDAF061B840E430058F440 /* map-pin-alt-600x600.png */; };
 		08BDAF091B8557E50058F440 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAF081B8557E50058F440 /* Employee.swift */; };
+		96D5307D1B855EE500BDD024 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5307C1B855EE500BDD024 /* EmployeeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		08BDAEFC1B840C7A0058F440 /* Square_ServiceIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square_ServiceIOSTests.swift; sourceTree = "<group>"; };
 		08BDAF061B840E430058F440 /* map-pin-alt-600x600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-pin-alt-600x600.png"; sourceTree = "<group>"; };
 		08BDAF081B8557E50058F440 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		96D5307C1B855EE500BDD024 /* EmployeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				08BDAEEF1B840C7A0058F440 /* LaunchScreen.xib */,
 				08BDAEE21B840C7A0058F440 /* Supporting Files */,
 				08BDAF081B8557E50058F440 /* Employee.swift */,
+				96D5307C1B855EE500BDD024 /* EmployeeCell.swift */,
 			);
 			path = Square_ServiceIOS;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				08BDAF091B8557E50058F440 /* Employee.swift in Sources */,
 				08BDAEE71B840C7A0058F440 /* MasterViewController.swift in Sources */,
 				08BDAEE51B840C7A0058F440 /* AppDelegate.swift in Sources */,
+				96D5307D1B855EE500BDD024 /* EmployeeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

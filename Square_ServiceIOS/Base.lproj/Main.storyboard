@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Opportunities-->
@@ -126,7 +126,7 @@
         <!--Leaderboard-->
         <scene sceneID="rlD-xL-jiT">
             <objects>
-                <viewController id="mGn-fv-iLK" sceneMemberID="viewController">
+                <viewController id="mGn-fv-iLK" customClass="MasterViewController" customModule="Square_ServiceIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JS5-41-JEe"/>
                         <viewControllerLayoutGuide type="bottom" id="IBn-mc-evs"/>
@@ -135,11 +135,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-Td-iQ0">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oU6-8P-Izv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Leaderboard" id="uLf-1D-Yxl"/>
+                                </items>
+                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hnv-wB-YJP">
+                                <rect key="frame" x="41" y="101" width="293" height="29"/>
+                                <segments>
+                                    <segment title="Top 50"/>
+                                    <segment title="Top 100"/>
+                                    <segment title="All"/>
+                                </segments>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-Jf-DY2">
-                                <rect key="frame" x="0.0" y="137" width="375" height="481"/>
+                                <rect key="frame" x="-32" y="137" width="375" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaderCell" rowHeight="75" id="1aZ-zS-pjO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmployeeCell" rowHeight="75" id="1aZ-zS-pjO" customClass="EmployeeCell" customModule="Square_ServiceIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1aZ-zS-pjO" id="RJv-e8-dEF">
@@ -168,32 +186,20 @@
                                                     <rect key="frame" x="98" y="37" width="38" height="33"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yvj-8w-SRy">
-                                                    <rect key="frame" x="8" y="2" width="82" height="70.5"/>
+                                                    <rect key="frame" x="8" y="2" width="82" height="71"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="employeeHours" destination="9qJ-Iv-CIu" id="3rS-Mb-YTy"/>
+                                            <outlet property="employeeImage" destination="Yvj-8w-SRy" id="sI3-fg-mQI"/>
+                                            <outlet property="employeeLabel" destination="59d-u1-5Ka" id="1TE-fC-9sa"/>
+                                            <outlet property="employeeOpportunity" destination="vl6-0c-Dey" id="1TL-BE-yer"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-Td-iQ0">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oU6-8P-Izv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Leaderboard" id="uLf-1D-Yxl"/>
-                                </items>
-                            </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hnv-wB-YJP">
-                                <rect key="frame" x="41" y="101" width="293" height="29"/>
-                                <segments>
-                                    <segment title="Top 50"/>
-                                    <segment title="Top 100"/>
-                                    <segment title="All"/>
-                                </segments>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
