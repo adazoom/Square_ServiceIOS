@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="60F-C5-L1W">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Opportunities-->
         <scene sceneID="Oei-wm-HO2">
             <objects>
-                <viewController id="IzW-1a-A16" sceneMemberID="viewController">
+                <viewController id="IzW-1a-A16" customClass="DetailViewController" customModule="Square_ServiceIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fju-jd-DqC"/>
                         <viewControllerLayoutGuide type="bottom" id="0sh-9N-OaL"/>
@@ -126,7 +126,7 @@
         <!--Leaderboard-->
         <scene sceneID="rlD-xL-jiT">
             <objects>
-                <viewController id="mGn-fv-iLK" customClass="MasterViewController" customModule="Square_ServiceIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mGn-fv-iLK" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JS5-41-JEe"/>
                         <viewControllerLayoutGuide type="bottom" id="IBn-mc-evs"/>
@@ -154,7 +154,7 @@
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-Jf-DY2">
-                                <rect key="frame" x="-32" y="137" width="375" height="481"/>
+                                <rect key="frame" x="0.0" y="137" width="375" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmployeeCell" rowHeight="75" id="1aZ-zS-pjO" customClass="EmployeeCell" customModule="Square_ServiceIOS" customModuleProvider="target">
