@@ -19,10 +19,10 @@ class Employee: NSObject {
     var image: UIImage
     
     init(employeeDictionary: NSDictionary) {
-        name = employeeDictionary["name"] as String
-        activity = employeeDictionary["activity"] as String
-        numHours = employeeDictionary["numberOfHours"] as Int
-        image = employeeDictionary["image"] as UIImage
+        name = employeeDictionary["name"] as! String
+        activity = employeeDictionary["activity"] as! String
+        numHours = employeeDictionary["numberOfHours"] as! Int
+        image = employeeDictionary["image"] as! UIImage
     }
 
 }
