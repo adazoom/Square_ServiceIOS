@@ -1,24 +1,22 @@
 //
-//  EmployeeCell.swift
+//  EventCell.swift
 //  Square_ServiceIOS
 //
-//  Created by code camp on 8/19/15.
+//  Created by Aida Zhumabekova on 8/20/15.
 //  Copyright (c) 2015 Aida Zhumabekova. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class EmployeeCell: UITableViewCell {
+class EventCell: UITableViewCell {
     
-    @IBOutlet weak var employeeImage: UIImageView!
     
-    @IBOutlet weak var employeeLabel: UILabel!
+    @IBOutlet weak var titleOutlet: UILabel!
+    @IBOutlet weak var locationOutlet: UILabel!
+    @IBOutlet weak var timeframeOutlet: UILabel!
+    @IBOutlet weak var descriptionOutlet: UITextView!
     
-    @IBOutlet weak var employeeOpportunity: UILabel!
-
-    @IBOutlet weak var employeeHours: UILabel!
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,5 +27,5 @@ class EmployeeCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-
+    
 }
