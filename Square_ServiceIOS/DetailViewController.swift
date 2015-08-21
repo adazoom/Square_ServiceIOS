@@ -20,12 +20,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
-    }
-
-    func configureView() {
-       self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "eventCell")
+        
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "eventCell")
+        
+        var refreshBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "refreshTapped:")
+        self.navigationItem.setRightBarButtonItems([refreshBarButtonItem], animated: true)
         
         let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
         urlSession = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
@@ -53,8 +52,47 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func refreshButtonTap(sender:UIButton) {
         
+        let url = NSURL(string: "https://api.myjson.com/bins/4760c")
+        
+        let dataTask = urlSession.dataTaskWithURL(url!, completionHandler: { data, response, error in
+            let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
+            
+            
+            if let events = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [AnyObject] {
+                var parsedEvents = [Event]()
+                for eventDictionary in events {
+                    parsedEvents.append(Event(eventDictionary:
+                        eventDictionary as! [NSObject: AnyObject]))
+                }
+                
+                self.eventsManager.events = parsedEvents
+                
+                self.tableView.reloadData()
+            }
+        })
+        
+        dataTask.resume()
+    }
+    
+    func downloadImageWithUrl(url: NSURL, forTableViewCell cell: EventCell) {
+        if let cachedImage = imageCache[url] {
+            cell.imageViewOutlet.image = cachedImage
+        }
+        else {
+            cell.imageViewOutlet.image = nil
+            let imageDownloadTask = urlSession.dataTaskWithURL(url,
+                completionHandler: { [weak cell] data, response, error in
+                    
+                    if let image = UIImage(data: data) {
+                        self.imageCache[url] = image
+                        cell?.imageViewOutlet.image = image
+                    }
+                })
+            
+            imageDownloadTask.resume()
+        }
     }
 
 }

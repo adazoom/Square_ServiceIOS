@@ -85,6 +85,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="descriptionOutlet" destination="btE-xT-7e8" id="Lfv-sm-91c"/>
+                                            <outlet property="imageViewOutlet" destination="xAH-AF-pb1" id="2Vo-wb-sma"/>
                                             <outlet property="locationOutlet" destination="xcd-H2-hWK" id="VcN-q6-CPK"/>
                                             <outlet property="signUpButton" destination="98D-o7-aLu" id="Lah-mZ-5Tq"/>
                                             <outlet property="timeframeOutlet" destination="jT3-D5-hhp" id="3tx-Zj-NT8"/>
