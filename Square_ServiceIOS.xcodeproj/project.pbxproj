@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		089D4C141B87041C008FB5C0 /* imageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D4C131B87041C008FB5C0 /* imageExt.swift */; };
 		089D4C161B870DE6008FB5C0 /* squareSplash.png in Resources */ = {isa = PBXBuildFile; fileRef = 089D4C151B870DE6008FB5C0 /* squareSplash.png */; };
+		089D4C1A1B871951008FB5C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089D4C191B871951008FB5C0 /* Images.xcassets */; };
 		08BDAEE51B840C7A0058F440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEE41B840C7A0058F440 /* AppDelegate.swift */; };
 		08BDAEE71B840C7A0058F440 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEE61B840C7A0058F440 /* MasterViewController.swift */; };
 		08BDAEE91B840C7A0058F440 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEE81B840C7A0058F440 /* DetailViewController.swift */; };
 		08BDAEEC1B840C7A0058F440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08BDAEEA1B840C7A0058F440 /* Main.storyboard */; };
-		08BDAEEE1B840C7A0058F440 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08BDAEED1B840C7A0058F440 /* Images.xcassets */; };
 		08BDAEF11B840C7A0058F440 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08BDAEEF1B840C7A0058F440 /* LaunchScreen.xib */; };
 		08BDAEFD1B840C7A0058F440 /* Square_ServiceIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEFC1B840C7A0058F440 /* Square_ServiceIOSTests.swift */; };
 		08BDAF071B840E430058F440 /* map-pin-alt-600x600.png in Resources */ = {isa = PBXBuildFile; fileRef = 08BDAF061B840E430058F440 /* map-pin-alt-600x600.png */; };
@@ -37,13 +37,13 @@
 /* Begin PBXFileReference section */
 		089D4C131B87041C008FB5C0 /* imageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageExt.swift; sourceTree = "<group>"; };
 		089D4C151B870DE6008FB5C0 /* squareSplash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squareSplash.png; sourceTree = "<group>"; };
+		089D4C191B871951008FB5C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		08BDAEDF1B840C7A0058F440 /* Square_ServiceIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Square_ServiceIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08BDAEE31B840C7A0058F440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08BDAEE41B840C7A0058F440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08BDAEE61B840C7A0058F440 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		08BDAEE81B840C7A0058F440 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		08BDAEEB1B840C7A0058F440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		08BDAEED1B840C7A0058F440 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		08BDAEF01B840C7A0058F440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		08BDAEF61B840C7A0058F440 /* Square_ServiceIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Square_ServiceIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08BDAEFB1B840C7A0058F440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +99,6 @@
 				08BDAEE61B840C7A0058F440 /* MasterViewController.swift */,
 				08BDAEE81B840C7A0058F440 /* DetailViewController.swift */,
 				08BDAEEA1B840C7A0058F440 /* Main.storyboard */,
-				08BDAEED1B840C7A0058F440 /* Images.xcassets */,
 				08BDAEEF1B840C7A0058F440 /* LaunchScreen.xib */,
 				08BDAEE21B840C7A0058F440 /* Supporting Files */,
 				08BDAF081B8557E50058F440 /* Employee.swift */,
@@ -108,6 +107,7 @@
 				08CDD57E1B86B323004354A8 /* EventCell.swift */,
 				08CDD5801B86CD7D004354A8 /* EventsManager.swift */,
 				089D4C131B87041C008FB5C0 /* imageExt.swift */,
+				089D4C191B871951008FB5C0 /* Images.xcassets */,
 			);
 			path = Square_ServiceIOS;
 			sourceTree = "<group>";
@@ -220,9 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				089D4C161B870DE6008FB5C0 /* squareSplash.png in Resources */,
+				089D4C1A1B871951008FB5C0 /* Images.xcassets in Resources */,
 				08BDAEEC1B840C7A0058F440 /* Main.storyboard in Resources */,
 				08BDAEF11B840C7A0058F440 /* LaunchScreen.xib in Resources */,
-				08BDAEEE1B840C7A0058F440 /* Images.xcassets in Resources */,
 				08BDAF071B840E430058F440 /* map-pin-alt-600x600.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Square_ServiceIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Square_ServiceIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
