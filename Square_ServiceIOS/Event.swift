@@ -15,7 +15,7 @@ class Event: NSObject {
     var location: String
     var timeframe: String
     var eventDescription: String
-    var image: UIImage
+    var imageURL: NSURL?
     
     init(eventDictionary: NSDictionary) {
         title = eventDictionary["organization"] as! String
@@ -32,7 +32,10 @@ class Event: NSObject {
        
         timeframe = timeToDisplay as String
         eventDescription = eventDictionary["description"] as! String
-        image = eventDictionary["pic"] as! UIImage
+        
+        if let imageURLString = eventDictionary["imageurl"] as? String {
+            imageURL = NSURL(string: imageURLString)
+        }
      
     }
     

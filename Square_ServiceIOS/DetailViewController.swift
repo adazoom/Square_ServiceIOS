@@ -13,38 +13,44 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var categoriesSelectorOutlet: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    var detailItem: AnyObject? {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
-
-    func configureView() {
-       self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "eventCell")
-    }
-
+    var urlSession: NSURLSession!
+    let eventsManager = EventsManager.sharedEventsManager
+    
+    var imageCache = [NSURL: UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func configureView() {
+       self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "eventCell")
+        
+        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        urlSession = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
     }
-    
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return eventsManager.events.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("EventCell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) as! EventCell
         
-        //cell.textLabel?.text = self.items[indexPath.row]
+        let event = eventsManager.events[indexPath.row]
+        
+        cell.titleOutlet.text = event.title
+        cell.descriptionOutlet.text = event.eventDescription
+        cell.locationOutlet.text = event.location
+        cell.timeframeOutlet.text = event.timeframe
+        
+        if let imageURL = event.imageURL {
+            downloadImageWithUrl(imageURL, forTableViewCell: cell)
+        }
         
         return cell
+
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
