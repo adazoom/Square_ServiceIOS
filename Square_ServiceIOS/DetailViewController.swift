@@ -56,7 +56,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
             
             let eventsOptional = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
-            println(eventsOptional)
             if let events = eventsOptional {
                 
                 var parsedEvents = [Event]()
@@ -133,6 +132,13 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         return 180
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "signUpSegue" {
+            if let destinationVC = segue.destinationViewController as? profileViewController{
+            }
+        }
     }
     
     func downloadImageWithUrl(url: NSURL, forTableViewCell cell: EventCell) {

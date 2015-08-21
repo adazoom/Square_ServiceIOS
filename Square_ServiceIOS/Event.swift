@@ -16,6 +16,7 @@ class Event: NSObject {
     var timeframe: String
     var eventDescription: String
     var imageURL: NSURL?
+    var image: UIImage
     var tag: [String]
     
     init(eventDictionary: NSDictionary) {
@@ -36,7 +37,18 @@ class Event: NSObject {
         if let imageURLString = eventDictionary["pic"] as? String {
             imageURL = NSURL(string: imageURLString)
         }
+        
+        image = UIImage(named:"burger.jpg")!
      
+    }
+    
+    init(title: String, location: String, timeframe: String, eventDescription: String, image: UIImage? = nil) {
+        self.title = title
+        self.location = location
+        self.timeframe = timeframe
+        self.eventDescription = eventDescription
+        self.image = image!
+        self.tag = ["food"]
     }
     
 }
