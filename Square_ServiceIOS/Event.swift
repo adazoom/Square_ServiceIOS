@@ -15,6 +15,7 @@ class Event: NSObject {
     var location: String
     var timeframe: String
     var eventDescription: String
+    var tags: [String]
     var imageURL: NSURL?
     
     init(eventDictionary: NSDictionary) {
@@ -25,10 +26,12 @@ class Event: NSObject {
         var st_time = eventDictionary["starttime"] as! NSDate
         var end_time = eventDictionary["endtime"] as! NSDate
         var dateFormatter = NSDateFormatter()
+        tags = eventDictionary["tags"] as! [String]
         dateFormatter.dateFormat = "hh:mm" //format style
         var startString = dateFormatter.stringFromDate(st_time)
         var endString = dateFormatter.stringFromDate(end_time)
         var timeToDisplay = startString + "-" + endString
+        
        
         timeframe = timeToDisplay as String
         eventDescription = eventDictionary["description"] as! String
