@@ -69,7 +69,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.eventsManager.events = parsedEvents
                         self.eventsToShow = self.eventsManager.events
                         self.tableView.reloadData()
-                        //dispatch_async(dispatch_get_main_queue(),  {self.tableView.reloadData()})
                     }
                 }
             }
@@ -108,8 +107,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.locationOutlet.text = event.location
         cell.timeframeOutlet.text = event.timeframe
         
-        if let imageURL = event.imageURL {
-            downloadImageWithUrl(imageURL, forTableViewCell: cell)
+        //cell.imageViewOutlet.image = UIImage(data: NSData.dataWithContentsOfURL(url: ));
+
+        
+     if let imageURL = event.imageURL {
+           downloadImageWithUrl(imageURL, forTableViewCell: cell)
         }
         
         return cell
@@ -144,7 +146,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     
                     if let image = UIImage(data: data) {
                         self.imageCache[url] = image
-                        cell?.imageViewOutlet.image = image
+                        cell?.imageViewOutlet.image = image.scaledImageToSize(CGSize(width: 40, height: 40))
                     }
                 })
             
