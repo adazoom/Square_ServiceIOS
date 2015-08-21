@@ -16,16 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="M6n-Bz-Fnd">
-                                <rect key="frame" x="41" y="102" width="293" height="29"/>
-                                <segments>
-                                    <segment title="Cat1"/>
-                                    <segment title="Cat2"/>
-                                    <segment title="Cat3"/>
-                                </segments>
-                            </segmentedControl>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrK-wm-ao4">
-                                <rect key="frame" x="0.0" y="41" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEP-Du-PFJ">
@@ -38,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="138" width="375" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OpportunityCell" rowHeight="152" id="CN4-Pi-H98">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" rowHeight="152" id="CN4-Pi-H98" customClass="EventCell" customModule="Square_ServiceIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CN4-Pi-H98" id="z0L-aA-SQb">
@@ -91,17 +83,36 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="descriptionOutlet" destination="btE-xT-7e8" id="Lfv-sm-91c"/>
+                                            <outlet property="locationOutlet" destination="xcd-H2-hWK" id="VcN-q6-CPK"/>
+                                            <outlet property="signUpButton" destination="98D-o7-aLu" id="Lah-mZ-5Tq"/>
+                                            <outlet property="timeframeOutlet" destination="jT3-D5-hhp" id="3tx-Zj-NT8"/>
+                                            <outlet property="titleOutlet" destination="9zb-sH-paR" id="tn1-OV-r3R"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="M6n-Bz-Fnd">
+                                <rect key="frame" x="41" y="102" width="293" height="29"/>
+                                <segments>
+                                    <segment title="Cat1"/>
+                                    <segment title="Cat2"/>
+                                    <segment title="Cat3"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Opportunities" id="agd-ne-SRl"/>
+                    <connections>
+                        <outlet property="categoriesSelectorOutlet" destination="M6n-Bz-Fnd" id="E2t-Ax-zQJ"/>
+                        <outlet property="tableView" destination="DNO-0M-bsS" id="MOQ-GF-fwW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYO-W2-aOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762.5" y="-636.5"/>
+            <point key="canvasLocation" x="-762.5" y="-649.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L2R-zz-Oae">
@@ -126,7 +137,7 @@
         <!--Leaderboard-->
         <scene sceneID="rlD-xL-jiT">
             <objects>
-                <viewController id="mGn-fv-iLK" sceneMemberID="viewController">
+                <viewController id="mGn-fv-iLK" customClass="MasterViewController" customModule="Square_ServiceIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JS5-41-JEe"/>
                         <viewControllerLayoutGuide type="bottom" id="IBn-mc-evs"/>
