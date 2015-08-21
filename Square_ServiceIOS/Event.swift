@@ -19,16 +19,12 @@ class Event: NSObject {
     
     init(eventDictionary: NSDictionary) {
         title = eventDictionary["organization"] as! String
-        location = eventDictionary["location"] as! String
+        location = eventDictionary["place"] as! String
        
         //convert dates to string
-        var st_time = eventDictionary["starttime"] as! NSDate
-        var end_time = eventDictionary["endtime"] as! NSDate
-        var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "hh:mm" //format style
-        var startString = dateFormatter.stringFromDate(st_time)
-        var endString = dateFormatter.stringFromDate(end_time)
-        var timeToDisplay = startString + "-" + endString
+        var st_time = eventDictionary["starttime"] as! String
+        var end_time = eventDictionary["endtime"] as! String
+        var timeToDisplay = st_time + "-" + end_time
        
         timeframe = timeToDisplay as String
         eventDescription = eventDictionary["description"] as! String

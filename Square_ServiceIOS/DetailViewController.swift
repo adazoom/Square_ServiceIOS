@@ -9,22 +9,49 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
-    @IBOutlet weak var categoriesSelectorOutlet: UISegmentedControl!
-    @IBOutlet weak var tableView: UITableView!
     
     var urlSession: NSURLSession!
     let eventsManager = EventsManager.sharedEventsManager
     
     var imageCache = [NSURL: UIImage]()
+
+    @IBOutlet weak var categoriesSelectorOutlet: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func refrechButton(sender: AnyObject) {
+        let url = NSURL(string: "https://api.myjson.com/bins/4760c")
+        
+        let dataTask = urlSession.dataTaskWithURL(url!, completionHandler: { data, response, error in
+            let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
+            
+            let eventsOptional = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
+            println(eventsOptional)
+            if let events = eventsOptional {
+                
+                var parsedEvents = [Event]()
+                if let activities = events["activities"] as? NSArray {
+                    for eventDictionary in activities {
+                        parsedEvents.append(Event(eventDictionary:
+                            eventDictionary as! [NSObject: AnyObject]))
+                        
+                        
+                        self.eventsManager.events = parsedEvents
+                        dispatch_async(dispatch_get_main_queue(),  {self.tableView.reloadData()})
+                    }
+                }
+            }
+            
+        })
+        
+        dataTask.resume()
+
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "eventCell")
-        
-        var refreshBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "refreshTapped:")
-        self.navigationItem.setRightBarButtonItems([refreshBarButtonItem], animated: true)
         
         let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
         urlSession = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
@@ -51,29 +78,22 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
 
     }
+    var selectedRowIndex:NSIndexPath?
     
-    func refreshButtonTap(sender:UIButton) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //expand the selected cell
+        selectedRowIndex = indexPath
+        tableView.beginUpdates()
+        tableView.endUpdates()
         
-        let url = NSURL(string: "https://api.myjson.com/bins/4760c")
-        
-        let dataTask = urlSession.dataTaskWithURL(url!, completionHandler: { data, response, error in
-            let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
-            
-            
-            if let events = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [AnyObject] {
-                var parsedEvents = [Event]()
-                for eventDictionary in events {
-                    parsedEvents.append(Event(eventDictionary:
-                        eventDictionary as! [NSObject: AnyObject]))
-                }
-                
-                self.eventsManager.events = parsedEvents
-                
-                self.tableView.reloadData()
+    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if let selected = selectedRowIndex{
+            if indexPath.row == selected.row{
+                return 300
             }
-        })
-        
-        dataTask.resume()
+        }
+        return 180
     }
     
     func downloadImageWithUrl(url: NSURL, forTableViewCell cell: EventCell) {
