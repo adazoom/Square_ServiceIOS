@@ -25,7 +25,6 @@ class Event: NSObject {
         var st_time = eventDictionary["starttime"] as! String
         var end_time = eventDictionary["endtime"] as! String
         var timeToDisplay = st_time + "-" + end_time
-       
         timeframe = timeToDisplay as String
         eventDescription = eventDictionary["description"] as! String
         
