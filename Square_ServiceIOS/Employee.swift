@@ -18,6 +18,13 @@ class Employee: NSObject, NSCoding {
     var numHours: Int
     var image: UIImage
     
+    init(name: String, activity: String, numHours: Int, image: UIImage? = nil) {
+        self.name = name
+        self.activity = activity
+        self.numHours = numHours
+        self.image = image!
+    }
+    
     init(employeeDictionary: NSDictionary) {
         name = employeeDictionary["name"] as! String
         activity = employeeDictionary["activity"] as! String

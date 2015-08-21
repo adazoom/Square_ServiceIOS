@@ -10,6 +10,14 @@
 		089D4C141B87041C008FB5C0 /* imageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D4C131B87041C008FB5C0 /* imageExt.swift */; };
 		089D4C161B870DE6008FB5C0 /* squareSplash.png in Resources */ = {isa = PBXBuildFile; fileRef = 089D4C151B870DE6008FB5C0 /* squareSplash.png */; };
 		089D4C1A1B871951008FB5C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089D4C191B871951008FB5C0 /* Images.xcassets */; };
+		08ACF1511B87922400EE4131 /* EmployeeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ACF1501B87922400EE4131 /* EmployeeManager.swift */; };
+		08ACF1581B8792D300EE4131 /* AlyssaHenry.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 08ACF1521B8792D300EE4131 /* AlyssaHenry.jpeg */; };
+		08ACF1591B8792D300EE4131 /* GloriaKimbwala.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 08ACF1531B8792D300EE4131 /* GloriaKimbwala.jpeg */; };
+		08ACF15A1B8792D300EE4131 /* jackDorsey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08ACF1541B8792D300EE4131 /* jackDorsey.jpg */; };
+		08ACF15B1B8792D300EE4131 /* miaShackleford.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 08ACF1551B8792D300EE4131 /* miaShackleford.jpeg */; };
+		08ACF15C1B8792D300EE4131 /* SarahFriar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08ACF1561B8792D300EE4131 /* SarahFriar.jpg */; };
+		08ACF15D1B8792D300EE4131 /* VanessaSlavich.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 08ACF1571B8792D300EE4131 /* VanessaSlavich.jpeg */; };
+		08ACF15F1B87A1CC00EE4131 /* Square_FAVICON.png in Resources */ = {isa = PBXBuildFile; fileRef = 08ACF15E1B87A1CC00EE4131 /* Square_FAVICON.png */; };
 		08BDAEE51B840C7A0058F440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEE41B840C7A0058F440 /* AppDelegate.swift */; };
 		08BDAEE71B840C7A0058F440 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEE61B840C7A0058F440 /* MasterViewController.swift */; };
 		08BDAEE91B840C7A0058F440 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEE81B840C7A0058F440 /* DetailViewController.swift */; };
@@ -38,6 +46,14 @@
 		089D4C131B87041C008FB5C0 /* imageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageExt.swift; sourceTree = "<group>"; };
 		089D4C151B870DE6008FB5C0 /* squareSplash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squareSplash.png; sourceTree = "<group>"; };
 		089D4C191B871951008FB5C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		08ACF1501B87922400EE4131 /* EmployeeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeManager.swift; sourceTree = "<group>"; };
+		08ACF1521B8792D300EE4131 /* AlyssaHenry.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AlyssaHenry.jpeg; sourceTree = "<group>"; };
+		08ACF1531B8792D300EE4131 /* GloriaKimbwala.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GloriaKimbwala.jpeg; sourceTree = "<group>"; };
+		08ACF1541B8792D300EE4131 /* jackDorsey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jackDorsey.jpg; sourceTree = "<group>"; };
+		08ACF1551B8792D300EE4131 /* miaShackleford.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miaShackleford.jpeg; sourceTree = "<group>"; };
+		08ACF1561B8792D300EE4131 /* SarahFriar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SarahFriar.jpg; sourceTree = "<group>"; };
+		08ACF1571B8792D300EE4131 /* VanessaSlavich.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VanessaSlavich.jpeg; sourceTree = "<group>"; };
+		08ACF15E1B87A1CC00EE4131 /* Square_FAVICON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Square_FAVICON.png; sourceTree = "<group>"; };
 		08BDAEDF1B840C7A0058F440 /* Square_ServiceIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Square_ServiceIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08BDAEE31B840C7A0058F440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08BDAEE41B840C7A0058F440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +118,7 @@
 				08BDAEEF1B840C7A0058F440 /* LaunchScreen.xib */,
 				08BDAEE21B840C7A0058F440 /* Supporting Files */,
 				08BDAF081B8557E50058F440 /* Employee.swift */,
+				08ACF1501B87922400EE4131 /* EmployeeManager.swift */,
 				08CDD57C1B86B167004354A8 /* Event.swift */,
 				96D5307C1B855EE500BDD024 /* EmployeeCell.swift */,
 				08CDD57E1B86B323004354A8 /* EventCell.swift */,
@@ -115,8 +132,15 @@
 		08BDAEE21B840C7A0058F440 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				08ACF1521B8792D300EE4131 /* AlyssaHenry.jpeg */,
+				08ACF1531B8792D300EE4131 /* GloriaKimbwala.jpeg */,
+				08ACF1541B8792D300EE4131 /* jackDorsey.jpg */,
+				08ACF1551B8792D300EE4131 /* miaShackleford.jpeg */,
+				08ACF1561B8792D300EE4131 /* SarahFriar.jpg */,
+				08ACF1571B8792D300EE4131 /* VanessaSlavich.jpeg */,
 				089D4C151B870DE6008FB5C0 /* squareSplash.png */,
 				08BDAF061B840E430058F440 /* map-pin-alt-600x600.png */,
+				08ACF15E1B87A1CC00EE4131 /* Square_FAVICON.png */,
 				08BDAEE31B840C7A0058F440 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -222,8 +246,15 @@
 				089D4C161B870DE6008FB5C0 /* squareSplash.png in Resources */,
 				089D4C1A1B871951008FB5C0 /* Images.xcassets in Resources */,
 				08BDAEEC1B840C7A0058F440 /* Main.storyboard in Resources */,
+				08ACF15F1B87A1CC00EE4131 /* Square_FAVICON.png in Resources */,
 				08BDAEF11B840C7A0058F440 /* LaunchScreen.xib in Resources */,
+				08ACF15A1B8792D300EE4131 /* jackDorsey.jpg in Resources */,
+				08ACF1591B8792D300EE4131 /* GloriaKimbwala.jpeg in Resources */,
+				08ACF15D1B8792D300EE4131 /* VanessaSlavich.jpeg in Resources */,
 				08BDAF071B840E430058F440 /* map-pin-alt-600x600.png in Resources */,
+				08ACF1581B8792D300EE4131 /* AlyssaHenry.jpeg in Resources */,
+				08ACF15C1B8792D300EE4131 /* SarahFriar.jpg in Resources */,
+				08ACF15B1B8792D300EE4131 /* miaShackleford.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +275,7 @@
 				08BDAEE91B840C7A0058F440 /* DetailViewController.swift in Sources */,
 				08BDAF091B8557E50058F440 /* Employee.swift in Sources */,
 				08BDAEE71B840C7A0058F440 /* MasterViewController.swift in Sources */,
+				08ACF1511B87922400EE4131 /* EmployeeManager.swift in Sources */,
 				08BDAEE51B840C7A0058F440 /* AppDelegate.swift in Sources */,
 				08CDD57D1B86B167004354A8 /* Event.swift in Sources */,
 				96D5307D1B855EE500BDD024 /* EmployeeCell.swift in Sources */,
