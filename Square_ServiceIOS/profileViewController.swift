@@ -49,12 +49,16 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
         var myEvent = eventsManager.myEvents[indexPath.row]
         cell.titleOutlet.text = myEvent.title
         cell.timeframeOutlet.text = myEvent.timeframe
-        cell.descriptionOutlet.text = myEvent.description
+        cell.descriptionOutlet.text = myEvent.eventDescription
         cell.locationOutlet.text = myEvent.location
         
-        cell.imageView?.image = myEvent.image
+        cell.imageView?.image = myEvent.image.scaledImageToSize(CGSize(width: 80, height: 80))
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 250
     }
 
     
