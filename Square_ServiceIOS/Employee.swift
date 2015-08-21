@@ -11,7 +11,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class Employee: NSObject {
+class Employee: NSObject, NSCoding {
     
     var name: String
     var activity: String
@@ -23,6 +23,21 @@ class Employee: NSObject {
         activity = employeeDictionary["activity"] as! String
         numHours = employeeDictionary["numberOfHours"] as! Int
         image = employeeDictionary["image"] as! UIImage
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        name = aDecoder.decodeObjectForKey("name") as! String
+        activity = aDecoder.decodeObjectForKey("activity") as! String
+        numHours = aDecoder.decodeIntegerForKey("numberOfHours")
+        image = aDecoder.decodeObjectForKey("image") as! UIImage
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeObject(activity,forKey: "activity")
+        aCoder.encodeInteger(numHours,forKey: "numberOfHours")
+        aCoder.encodeObject(image, forKey: "UIImage")
+
     }
 
 }
