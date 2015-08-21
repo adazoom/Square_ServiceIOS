@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordOutlet.delegate=self
+        usernameOutlet.delegate=self
     }
-    
-    let pieVC = MasterViewController(nibName: "MasterViewController", bundle: nil)
     
     @IBOutlet weak var passwordOutlet: UITextField!
    
@@ -23,13 +23,19 @@ class LogInViewController: UIViewController {
     
     @IBAction func logInPressed(sender: AnyObject) {
         if(usernameOutlet.text == "volunteer" && passwordOutlet.text == "123"){
-            
+            println("accsess granted")
         }else{
             var alert = UIAlertController(title: "Alert", message: "Incorrect password or username", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
         
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
     }
     
 }
