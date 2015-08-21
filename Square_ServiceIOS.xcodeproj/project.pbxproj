@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		089D4C141B87041C008FB5C0 /* imageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D4C131B87041C008FB5C0 /* imageExt.swift */; };
 		08BDAEE51B840C7A0058F440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEE41B840C7A0058F440 /* AppDelegate.swift */; };
 		08BDAEE71B840C7A0058F440 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEE61B840C7A0058F440 /* MasterViewController.swift */; };
 		08BDAEE91B840C7A0058F440 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BDAEE81B840C7A0058F440 /* DetailViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		089D4C131B87041C008FB5C0 /* imageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageExt.swift; sourceTree = "<group>"; };
 		08BDAEDF1B840C7A0058F440 /* Square_ServiceIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Square_ServiceIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08BDAEE31B840C7A0058F440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08BDAEE41B840C7A0058F440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				96D5307C1B855EE500BDD024 /* EmployeeCell.swift */,
 				08CDD57E1B86B323004354A8 /* EventCell.swift */,
 				08CDD5801B86CD7D004354A8 /* EventsManager.swift */,
+				089D4C131B87041C008FB5C0 /* imageExt.swift */,
 			);
 			path = Square_ServiceIOS;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				96D5307D1B855EE500BDD024 /* EmployeeCell.swift in Sources */,
 				08CDD5811B86CD7D004354A8 /* EventsManager.swift in Sources */,
 				08CDD57F1B86B323004354A8 /* EventCell.swift in Sources */,
+				089D4C141B87041C008FB5C0 /* imageExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
