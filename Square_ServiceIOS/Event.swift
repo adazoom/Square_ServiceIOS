@@ -16,19 +16,24 @@ class Event: NSObject {
     var timeframe: String
     var eventDescription: String
     var imageURL: NSURL?
+    var tag: [String]
     
     init(eventDictionary: NSDictionary) {
         title = eventDictionary["organization"] as! String
         location = eventDictionary["place"] as! String
-       
+        var tagString = eventDictionary["tag"] as! String
+        tag = tagString.componentsSeparatedByString(",")
         //convert dates to string
         var st_time = eventDictionary["starttime"] as! String
         var end_time = eventDictionary["endtime"] as! String
-        var timeToDisplay = st_time + "-" + end_time
+         //"llo, playgroun"
+
+        var timeToDisplay = st_time.substringWithRange(Range<String.Index>(start: advance(st_time.startIndex, 11), end: advance(st_time.endIndex, -4))) + "-" + end_time.substringWithRange(Range<String.Index>(start: advance(end_time.startIndex, 11), end: advance(end_time.endIndex, -4)))
         timeframe = timeToDisplay as String
         eventDescription = eventDictionary["description"] as! String
         
-        if let imageURLString = eventDictionary["imageurl"] as? String {
+        
+        if let imageURLString = eventDictionary["pic"] as? String {
             imageURL = NSURL(string: imageURLString)
         }
      
