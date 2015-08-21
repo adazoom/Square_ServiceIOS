@@ -21,7 +21,7 @@ class EmployeeManager {
     }
     
     init() {
-        let  first = Employee(name: "Jack" , activity: "Code Camp", numHours: 12, image:  UIImage(named:"jackDorsey.jpg"))
+        let  first = Employee(name: "Jack" , activity: "Code Camp", numHours: 12, image:  UIImage(named:"jackDorsey1.jpg"))
         employees.append(first)
         let  sec = Employee(name: "Sarah" , activity: "Child Care", numHours: 14, image:  UIImage(named:"SarahFriar.jpg"))
         employees.append(sec)

@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Aida Zhumabekova. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 
@@ -27,27 +26,11 @@ class EmployeeCell: UITableViewCell {
         // Initialization code
     }
 
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
     override func layoutSubviews() {
         super.layoutSubviews()
         
         self.employeeImage.layer.cornerRadius = employeeImage.bounds.width / 2.0
-        self.employeeImage.clipsToBounds = true
-        //employeeImage.image.round()
+       // self.employeeImage.clipsToBounds = true
     }
 
-}
-
-public extension UIView {
-    public func round() {
-        let width = bounds.width < bounds.height ? bounds.width : bounds.height
-        let mask = CAShapeLayer()
-        mask.path = UIBezierPath(ovalInRect: CGRectMake(bounds.midX - width / 2, bounds.midY - width / 2, width, width)).CGPath
-        self.layer.mask = mask
-}
 }
